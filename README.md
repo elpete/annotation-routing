@@ -16,3 +16,28 @@ Actions without a `route` annotation use the name of the method.
 Add a `method` annotation to specify the allowed method.
 
 Works in modules, adding routes under the module entrypoint.
+
+### Examples
+
+```cfc
+component route="/echo" {
+
+	/**
+	 * Home page
+	 */
+	function index( event, rc, prc ) route="/something" {
+		event.setView( "home/index" );
+	}
+
+}
+```
+
+```cfc
+component route="/employees" resourceful api parameterName="employeeID" {
+
+    function index() {
+        return [ { "id": 1, "name": "John Doe" } ];
+    }
+
+}
+```
