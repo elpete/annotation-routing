@@ -1,0 +1,36 @@
+{
+    "name":"annotation-routing",
+    "version":"0.0.0",
+    "author":"Eric Peterson",
+    "location":"forgeboxStorage#v0.0.0",
+    "homepage":"https://github.com/forgeboxStorage",
+    "documentation":"https://github.com/forgeboxStorage",
+    "repository":{
+        "type":"git",
+        "URL":"https://github.com/forgeboxStorage"
+    },
+    "bugs":"https://github.com/forgeboxStorage/issues",
+    "slug":"annotation-routing",
+    "shortDescription":"Use annotations in your handlers to configure your router!",
+    "description":"Use annotations in your handlers to configure your router!",
+    "type":"modules",
+    "dependencies":{},
+    "devDependencies":{
+        "coldbox":"^5.0.0",
+        "testbox":"^3.0.0"
+    },
+    "installPaths":{
+        "testbox":"testbox/",
+        "coldbox":"tests/resources/app/coldbox/"
+    },
+    "scripts":{
+        "postVersion":"package set location='forgeboxStorage#v`package version`'",
+        "onRelease":"publish",
+        "postPublish":"!git push && git push --tags"
+    },
+    "ignore":[
+        "**/.*",
+        "test",
+        "tests"
+    ]
+}
