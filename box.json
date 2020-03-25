@@ -1,34 +1,35 @@
 {
-    "name":"annotation-routing",
-    "version":"0.0.0",
-    "author":"Eric Peterson",
-    "location":"forgeboxStorage#v0.0.0",
-    "homepage":"https://github.com/forgeboxStorage",
-    "documentation":"https://github.com/forgeboxStorage",
-    "repository":{
-        "type":"git",
-        "URL":"https://github.com/forgeboxStorage"
+    "name": "annotation-routing",
+    "version": "0.0.0",
+    "author": "Eric Peterson",
+    "location": "forgeboxStorage",
+    "homepage": "https://github.com/elpete/annotation-routing",
+    "documentation": "https://github.com/elpete/annotation-routing",
+    "repository": {
+        "type": "git",
+        "URL": "https://github.com/elpete/annotation-routing"
     },
-    "bugs":"https://github.com/forgeboxStorage/issues",
-    "slug":"annotation-routing",
-    "shortDescription":"Use annotations in your handlers to configure your router!",
-    "description":"Use annotations in your handlers to configure your router!",
-    "type":"modules",
-    "dependencies":{},
-    "devDependencies":{
-        "coldbox":"^5.0.0",
-        "testbox":"^3.0.0"
+    "bugs": "https://github.com/elpete/annotation-routing/issues",
+    "slug": "annotation-routing",
+    "shortDescription": "Use annotations in your handlers to configure your router!",
+    "description": "Use annotations in your handlers to configure your router!",
+    "type": "modules",
+    "dependencies": {},
+    "devDependencies": {
+        "coldbox": "^5.0.0",
+        "testbox": "^3.0.0"
     },
-    "installPaths":{
-        "testbox":"testbox/",
-        "coldbox":"tests/resources/app/coldbox/"
+    "installPaths": {
+        "testbox": "testbox/",
+        "coldbox": "tests/resources/app/coldbox/"
     },
-    "scripts":{
-        "postVersion":"package set location='forgeboxStorage#v`package version`'",
-        "onRelease":"publish",
-        "postPublish":"!git push && git push --tags"
+    "scripts": {
+        "format": "cfformat run interceptors/**/*.cfc,tests/specs/**/*.cfc --overwrite",
+        "format:check": "cfformat check interceptors/**/*.cfc,tests/specs/**/*.cfc",
+        "onRelease": "publish",
+        "postPublish": "!git push && git push --tags"
     },
-    "ignore":[
+    "ignore": [
         "**/.*",
         "test",
         "tests"

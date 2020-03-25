@@ -1,4 +1,5 @@
 component extends="testbox.system.BaseSpec" {
+
     function run() {
         describe( "Sample Unit Spec", function() {
             it( "can run unit specs on the module", function() {
@@ -7,4 +8,5 @@ component extends="testbox.system.BaseSpec" {
             } );
         } );
     }
+
 }
